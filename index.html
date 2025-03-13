@@ -60,7 +60,7 @@
                                 <div class="topbar-two__info__icon">
                                     <i class="icon-pin"></i>
                                 </div>
-                                <p class="topbar-two__info__location">30 Commercial Road Fratton, Australia </p>
+                                <p class="topbar-two__info__location">India </p>
                             </li>
                             <li class="topbar-two__info__item">
                                 <div class="topbar-two__info__icon">
@@ -72,7 +72,7 @@
                                 <div class="topbar-two__info__icon">
                                     <i class="icon-call"></i>
                                 </div>
-                                <a href="tel:+92-8800-6000" class="topbar-two__info__contact">+92 (8800)-6000</a>
+                                <a href="tel:+91 98765 43210" class="topbar-two__info__contact">+91 98765 43210</a>
                             </li>
                         </ul>
                     </div>
@@ -1966,19 +1966,19 @@
                                         <div class="footer-widget__info__item">
                                             <i class="icon-pin"></i>
                                         </div>
-                                        <a class="footer-widget__info__text" href="https://www.google.com/maps">6391 Elgin St. Celina, Delaware <br> New York. USA</a>
+                                        <a class="footer-widget__info__text" href="https://www.google.com/maps">India</a>
                                     </li>
                                     <li>
                                         <div class="footer-widget__info__item">
                                             <i class="icon-telephone-call"></i>
                                         </div>
-                                        <a class="footer-widget__info__text" href="tel:303-555-0105">(303) 555-0105</a>
+                                        <a class="footer-widget__info__text" href="tel:+91 98765 43210">+91 98765 43210/a>
                                     </li>
                                     <li>
                                         <div class="footer-widget__info__item">
                                             <i class="icon-envelope"></i>
                                         </div>
-                                        <a class="footer-widget__info__text" href="mailto:needhelp@company.com">michael.mitc@example.com</a>
+                                        <a class="footer-widget__info__text" href="mailto:needhelp@company.com">help@example.com</a>
                                     </li>
                                 </ul>
                                 <div class="footer-widget__app">
@@ -2001,7 +2001,7 @@
                 <div class="container">
                     <div class="main-footer__bottom__inner">
                         <p class="main-footer__copyright">
-                            &copy; Copyright <span class="dynamic-year"></span> by Solinom HTML Template.
+                            &copy; Copyright <span class="dynamic-year"></span> by Kayathri K
                         </p>
                     </div>
                 </div>
@@ -2025,7 +2025,7 @@
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:+91 98765 43210">+91 98765 43210</a>
                 </li>
             </ul>
             <div class="mobile-nav__social">
@@ -2078,7 +2078,22 @@
     <script src="assets/vendors/countdown/countdown.min.js"></script>
     <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+<!-- NEW SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Select all elements with the class containing the price
+    let priceElements = document.querySelectorAll(".room-card__top__price__content");
 
+    priceElements.forEach(priceElement => {
+        let priceText = priceElement.innerText.trim(); // Get the price text
+        let priceMatch = priceText.match(/\$(\d+)/); // Extract the numeric value
+
+        if (priceMatch) {
+            let newPrice = parseInt(priceMatch[1]) * 10; // Add zero to the price
+            priceElement.innerText = `₹${newPrice}`; // Update the text
+        }
+    });
+});
     <!-- GSAP Animation -->
     <script src="assets/vendors/gsap/gsap.js"></script>
     <script src="assets/vendors/gsap/ScrollTrigger.min.js"></script>
